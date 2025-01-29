@@ -6,7 +6,7 @@
 /*   By: anareval <anareval@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/27 20:01:46 by anareval          #+#    #+#             */
-/*   Updated: 2025/01/29 14:07:08 by anareval         ###   ########.fr       */
+/*   Updated: 2025/01/29 17:38:17 by anareval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,17 +48,17 @@ static int	select_fomat(char c, va_list arg)
 	else if (c == 's')
 		cont += ft_putstr_fd(va_arg(arg, char *), 1);
 	else if (c == 'p')
-		;//imprime puntero
+		cont += ft_putptr(arg);
 	else if (c == 'd')
 		cont += ft_putnbr_fd(va_arg(arg, long), 1);
 	else if (c == 'i')
 		cont += ft_putnbr_fd(va_arg(arg, int), 1);
 	else if (c == 'u')
-		;//imprime decimal
+		cont += ft_putnbruns_fd(va_arg(arg, int), 1);
 	else if (c == 'x')
-		;//imprime minuscula
+		cont += ft_putnbrex_fd(va_arg(arg, long), 1, 0);
 	else if (c == 'X')
-		;//imprime mayuscula
+		cont += ft_putnbrex_fd(va_arg(arg, long), 1, 1);
 	else if (c == '%')
 		cont += ft_putchar_fd('%', 1);
 	return (cont);

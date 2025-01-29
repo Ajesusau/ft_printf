@@ -6,7 +6,7 @@
 #    By: anareval <anareval@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/12 13:32:02 by anareval          #+#    #+#              #
-#    Updated: 2025/01/29 13:16:50 by anareval         ###   ########.fr        #
+#    Updated: 2025/01/29 16:58:57 by anareval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,9 @@ SOURCES =			ft_printf.c \
 					ft_putchar_fd.c \
 					ft_putstr_fd.c \
 					ft_putnbr_fd.c \
+					ft_putptr.c \
+					ft_putnbrex_fd.c \
+					ft_putnbruns_fd.c \
 
 OBJECTS = $(SOURCES:.c=.o)
 

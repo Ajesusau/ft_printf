@@ -1,32 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anareval <anareval@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/05 19:40:39 by anareval          #+#    #+#             */
-/*   Updated: 2025/01/29 15:33:41 by anareval         ###   ########.fr       */
+/*   Created: 2025/01/29 14:16:25 by anareval          #+#    #+#             */
+/*   Updated: 2025/01/29 17:34:54 by anareval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr_fd(char *s, int fd)
+int	ft_putptr(void *ptr)
 {
-	int		cont;
+	unsigned long	str;
 
-	cont = 0;
-	if (s == NULL)
-	{
-		write (fd, "(null)", 6);
-		return (6);
-	}
-	while (*s)
-	{
-		write(fd, s, 1);
-		s++;
-		cont ++;
-	}
-	return (cont);
+    str = (unsigned long) ptr;
+    return (ft_putstr_fd("0x", 1) + ft_putnbrex_fd(str, 1, 0));
 }

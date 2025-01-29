@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putnbruns_fd.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anareval <anareval@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/05 19:40:39 by anareval          #+#    #+#             */
-/*   Updated: 2025/01/29 15:33:41 by anareval         ###   ########.fr       */
+/*   Created: 2025/01/05 20:14:57 by anareval          #+#    #+#             */
+/*   Updated: 2025/01/29 17:01:33 by anareval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putstr_fd(char *s, int fd)
+int	ft_putnbruns_fd(int n, int fd)
 {
+	long	nb;
 	int		cont;
 
-	cont = 0;
-	if (s == NULL)
-	{
-		write (fd, "(null)", 6);
-		return (6);
-	}
-	while (*s)
-	{
-		write(fd, s, 1);
-		s++;
-		cont ++;
-	}
+	cont = 1;
+	nb = (unsigned int)n;
+	if (nb >= 10)
+		cont += ft_putnbr_fd(nb / 10, fd);
+	ft_putchar_fd(nb % 10 + '0', fd);
 	return (cont);
 }

@@ -6,7 +6,7 @@
 /*   By: anareval <anareval@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/05 20:14:57 by anareval          #+#    #+#             */
-/*   Updated: 2025/01/29 13:13:25 by anareval         ###   ########.fr       */
+/*   Updated: 2025/01/29 15:11:11 by anareval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ int	ft_putnbr_fd(int n, int fd)
 	{
 		ft_putchar_fd('-', fd);
 		nb = -nb;
+		cont++;
 	}
 	if (nb >= 10)
 		cont += ft_putnbr_fd(nb / 10, fd);
