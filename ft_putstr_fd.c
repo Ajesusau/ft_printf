@@ -1,24 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anareval <anareval@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/12 13:07:40 by anareval          #+#    #+#             */
-/*   Updated: 2025/01/29 14:08:43 by anareval         ###   ########.fr       */
+/*   Created: 2025/01/05 19:40:39 by anareval          #+#    #+#             */
+/*   Updated: 2025/01/29 14:08:59 by anareval         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_PRINTF_H
-# define FT_PRINTF_H
+#include "ft_printf.h"
 
-# include <unistd.h>
-# include <stdarg.h>
+int	ft_putstr_fd(char *s, int fd)
+{
+	int	cont;
 
-int	ft_printf(char const *str, ...);
-int	ft_putchar_fd(char c, int fd);
-int	ft_putstr_fd(char *s, int fd);
-int	ft_putnbr_fd(int n, int fd);
-
-#endif
+	cont = 0;
+	while (*s)
+	{
+		write(fd, s, 1);
+		s++;
+		cont ++;
+	}
+	return (cont);
+}
