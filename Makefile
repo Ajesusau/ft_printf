@@ -6,7 +6,7 @@
 #    By: anareval <anareval@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/12/12 13:32:02 by anareval          #+#    #+#              #
-#    Updated: 2025/01/31 16:33:17 by anareval         ###   ########.fr        #
+#    Updated: 2025/06/26 15:29:36 by anareval         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ AR = ar rcs
 RM = rm -f
 
 SOURCES =			ft_printf.c \
-					ft_put.c \
+					ft_put_utils.c \
 					ft_putnbr.c \
 
 OBJECTS = $(SOURCES:.c=.o)
