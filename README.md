@@ -1,9 +1,9 @@
-# 🖨️ ft_printf
+#  ft_printf
 
 **ft_printf** es una implementación personalizada de la función `printf` de la biblioteca estándar de C.  
 Este proyecto forma parte del plan de estudios de [42 School](https://42.fr) y tiene como objetivo profundizar en el manejo de **variádicos**, **formatos de impresión** y la creación de funciones robustas para formatear y mostrar datos.
 
-## 🧠 Objetivos del Proyecto
+##  Objetivos del Proyecto
 
 - Comprender el funcionamiento interno de la función `printf`.
 - Manejar **funciones variádicas** en C (`<stdarg.h>`).
@@ -11,7 +11,7 @@ Este proyecto forma parte del plan de estudios de [42 School](https://42.fr) y t
 - Mejorar la modularidad y organización del código.
 - Reforzar la escritura de código limpio, estructurado y eficiente.
 
-## 📁 Estructura del Proyecto
+##  Estructura del Proyecto
 ```
 ft_printf/
 ├── Makefile # Reglas de compilación
@@ -22,7 +22,7 @@ ft_printf/
 └── README.md # Documentación del proyecto
 ```
 
-## ✅ Funcionalidades Implementadas
+##  Funcionalidades Implementadas
 
 ### Conversores obligatorios:
 - `%c` → imprime un solo carácter
@@ -35,7 +35,7 @@ ft_printf/
 - `%X` → imprime un número en hexadecimal (mayúsculas)
 - `%%` → imprime el símbolo `%`
 
-## 🛠️ Compilación
+##  Compilación
 
 Para compilar la librería, simplemente ejecuta:
 ```
@@ -55,7 +55,7 @@ Para limpiar y recompilar:
 ```
 make re
 ```
-📌 Uso
+ Uso
 Incluye el archivo de cabecera en tu proyecto:
 ```
 #include "ft_printf.h"
